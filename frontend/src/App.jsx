@@ -21,7 +21,8 @@ function App() {
     {
       path: "/login",
       element: (
-        <ProtectedRoute user={!user} redirect="/">
+        <ProtectedRoute user={!user} redirect="/"> 
+        {/* if user prop passed is true then show children , if not then redirect to specified url */}
           <Login />
         </ProtectedRoute>
       ),
