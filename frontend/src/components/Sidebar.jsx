@@ -16,6 +16,8 @@ import { logoutUser } from "../redux/slices/authSlice";
 import CreatePost from "./CreatePost";
 import { useRef } from "react";
 import { useEffect } from "react";
+import logo from '../assets/logo.png'
+
 
 const Sidebar = () => {
   const toast = useToast();
@@ -72,7 +74,9 @@ const Sidebar = () => {
   }, []);
   return (
     <div className="flex flex-col h-screen ">
-      <h1 className="text-xl pl-10 pt-4 font-semibold my-2 ">LOGO</h1>
+      <div className=" w-20 mx-auto">
+            <img src={logo} alt="" className="w-full h-auto object-cover" />
+          </div>
       <div className="">
         {sidebarItems.map((item, index) => (
           <div

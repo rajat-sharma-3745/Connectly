@@ -7,6 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { LuLoader } from "react-icons/lu";
 import { useDispatch, useSelector } from "react-redux";
 import { setAuthUser } from "../redux/slices/authSlice";
+import logo from '../assets/logo.png'
 
 const Login = () => {
   const toast = useToast();
@@ -63,8 +64,10 @@ const Login = () => {
         className="shadow-lg flex flex-col gap-2 p-8"
       >
         <div>
-          <h1 className="text-center text-xl font-bold">LOGO</h1>
-          <p className="text-sm text-center">Login to see photos and videos</p>
+          <div className=" w-20 mx-auto">
+            <img src={logo} alt="" className="w-full h-auto object-cover" />
+          </div>
+          {/* <p className="text-sm text-center">Login to see photos and videos</p> */}
         </div>
         <div className="grid grid-cols-1 gap-2">
           <Input

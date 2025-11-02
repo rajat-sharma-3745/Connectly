@@ -5,6 +5,8 @@ import { axiosInstance } from "../utils/axiosInstance";
 import { API_PATHS } from "../utils/apiPaths";
 import { Link, useNavigate } from "react-router-dom";
 import { LuLoader } from "react-icons/lu";
+import logo from '../assets/logo.png'
+
 
 const Signup = () => {
   const toast = useToast();
@@ -53,8 +55,9 @@ const Signup = () => {
         className="shadow-lg flex flex-col gap-2 p-8"
       >
         <div>
-          <h1 className="text-center text-xl font-bold">LOGO</h1>
-          <p className="text-sm text-center">Signup to see photos and videos</p>
+          <div className=" w-20 mx-auto">
+                      <img src={logo} alt="" className="w-full h-auto object-cover" />
+                    </div>
         </div>
         <div className="grid grid-cols-1 gap-2">
           <Input
